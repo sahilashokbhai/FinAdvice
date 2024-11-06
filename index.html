@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinAdvise - Financial Advisory </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+    <div class="logo">FinAdvise</div>
+    <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#calculators">Calculators</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+
+    <section id="home">
+        <div class="hero-container">
+            <div class="hero-image animate fade-right">
+                <img src="OIP.jpg" alt="Financial Advisor">
+            </div>
+            <div class="hero-text animate fade-left">
+                <h1>Expert Financial Guidance</h1>
+                <p>Plan your future with our professional financial advisory services</p>
+                <button id="consultation-button" onclick="scrollToConsultation()">Book Free Consultation</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- create here calculators Section -->
+    <section id="calculators">
+        <h2>Financial Calculators</h2>
+        <div class="calculator-container">
+            <!-- Loan Calculator -->
+            <div class="calculator animate fade-up">
+                <h3>Loan Calculator</h3>
+                <div class="calc-input">
+                    <input type="number" id="loanAmount" placeholder="Loan Amount">
+                    <input type="number" id="loanRate" placeholder="Interest Rate (%)">
+                    <input type="number" id="loanYears" placeholder="Years">
+                    <button onclick="calculateLoan()">Calculate</button>
+                </div>
+                <div id="loanResult" class="result"></div>
+            </div>
+
+            <!-- Interest Calculator -->
+            <div class="calculator animate fade-up">
+
+                <h3>Interest Calculator</h3>
+                <div class="calc-input">
+                    <input type="number" id="principal" placeholder="Principal Amount">
+                    <input type="number" id="rate" placeholder="Interest Rate (%)">
+                    <input type="number" id="time" placeholder="Time (Years)">
+                    <button onclick="calculateInterest()">Calculate</button>
+                </div>
+                <div id="interestResult" class="result"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Consultation Form -->
+    <section id="contact">
+        <h2>Book Free Consultation</h2>
+        <div class="form-container animate fade-up">
+            <form id="consultationForm" onsubmit="submitForm(event)">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email Address" required>
+                <input type="tel" placeholder="Phone Number" required>
+                <textarea placeholder="Message" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
